@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Materi Kompleks: Fundamental Prinsip Desain & Komunikasi</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #container {
+    background: #1e1e2f;
+    max-width: 350px;
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    padding: 20px 20px 30px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  header h1 {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  header p {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  nav button {
+    background: #764ba2;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(118,75,162,0.6);
+    transition: background 0.3s ease;
+  }
+  nav button:hover, nav button:focus {
+    background: #8563c6;
+    outline: none;
+  }
+  nav button.active {
+    background: #a48be9;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(164,139,233,0.9);
+  }
+  section {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+  h2 {
+    border-bottom: 3px solid #764ba2;
+    padding-bottom: 8px;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  h3 {
+    color: #a48be9;
+    margin: 20px 0 10px 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  p, li {
+    line-height: 1.5;
+    font-size: 1rem;
+    margin: 5px 0 15px 0;
+    text-align: justify;
+  }
+  ul {
+    padding-left: 1.2rem;
+    margin: 0 0 15px 0;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  .highlight {
+    color: #ffd700;
+    font-weight: 700;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #7a6f99;
+    margin-top: 15px;
+    user-select: none;
+  }
+  /* Scrollbar for content section */
+  section::-webkit-scrollbar {
+    width: 6px;
+  }
+  section::-webkit-scrollbar-track {
+    background: #1e1e2f;
+  }
+  section::-webkit-scrollbar-thumb {
+    background-color: #764ba2;
+    border-radius: 3px;
+  }
+
+  /* Responsive */
+  @media (max-width: 360px) {
+    #container {
+      height: 600px;
+      padding: 15px 15px 25px;
+    }
+    header h1 {
+      font-size: 1.6rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+    p, li {
+      font-size: 0.95rem;
+    }
+    nav button {
+      font-size: 0.75rem;
+      padding: 6px 10px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div id="container" role="main" aria-label="Materi Prinsip Dasar Desain dan Komunikasi">
+    <header>
+      <h1>Fundamental Prinsip Desain & Komunikasi</h1>
+      <p>Mengenal konsep dan penerapan prinsip desain dan komunikasi dari level dasar hingga expert.</p>
+    </header>
+    <nav aria-label="Navigasi materi">
+      <button class="active" data-section="design-basic" aria-current="page">Desain Basic</button>
+      <button data-section="design-intermediate">Desain Intermediate</button>
+      <button data-section="design-expert">Desain Expert</button>
+      <button data-section="comm-basic">Komunikasi Basic</button>
+      <button data-section="comm-intermediate">Komunikasi Intermediate</button>
+      <button data-section="comm-expert">Komunikasi Expert</button>
+    </nav>
+    <section id="content-section" tabindex="0">
+      <!-- Content will be rendered here dynamically -->
+    </section>
+    <footer>
+      &copy; Raihan Ramadhan 2025
+    </footer>
+  </div>
+
+<script>
+  const contents = {
+    "design-basic": `
+      <article aria-labelledby="design-basic-title">
+      <h2 id="design-basic-title">Prinsip Desain - Dasar (Basic)</h2>
+      <h3>Kontras (Contrast)</h3>
+      <p><span class="highlight">Kontras</span> adalah perbedaan visual antara elemen desain yang digunakan untuk menarik perhatian dan memudahkan pemisahan informasi. Contohnya termasuk perbedaan warna terang dan gelap, ukuran besar dan kecil, atau bentuk yang berbeda.</p>
+      <h3>Penjajaran (Alignment)</h3>
+      <p>Penjajaran memastikan semua elemen berada pada garis atau posisi yang teratur, menciptakan keteraturan dan hubungan antar elemen. Hal ini membantu pandangan tertuju secara alami dan memperkuat pesan visual.</p>
+      <h3>Kedekatan (Proximity)</h3>
+      <p>Kedekatan mengelompokkan elemen yang terkait secara dekat untuk menunjukkan keterhubungan agar informasi mudah dipahami sebagai satu kesatuan yang utuh.</p>
+      <h3>Pengulangan (Repetition)</h3>
+      <p>Pengulangan mengulang elemen desain seperti warna, font, atau bentuk agar menciptakan konsistensi dan identitas visual pada sebuah karya.</p>
+      <h3>Ruang Kosong (White Space)</h3>
+      <p>Memberikan ruang kosong antar elemen agar desain tidak terlihat padat, meningkatkan keterbacaan dan kenyamanan visual.</p>
+      </article>
+    `,
+    "design-intermediate": `
+      <article aria-labelledby="design-intermediate-title">
+      <h2 id="design-intermediate-title">Prinsip Desain - Menengah (Intermediate)</h2>
+      <h3>Keseimbangan (Balance)</h3>
+      <p>Keseimbangan visual dapat bersifat simetris (elemen sama berat di kiri-kanan) atau asimetris (menggunakan elemen berbeda tapi tetap terdistribusi secara harmonis).</p>
+      <h3>Hierarki Visual</h3>
+      <p>Hierarki visual mengacu pada pengaturan elemen berdasarkan tingkat kepentingan untuk memandu mata pengguna memahami informasi dengan urutan prioritas.</p>
+      <h3>Proporsi</h3>
+      <p>Proporsi adalah perbandingan ukuran elemen satu dengan yang lain untuk menciptakan harmoni dan keindahan.</p>
+      <h3>Tipografi</h3>
+      <p>Penggunaan font yang tepat, termasuk ukuran, bentuk, dan jarak antar karakter untuk meningkatkan keterbacaan dan estetika.</p>
+      <h3>Warna</h3>
+      <p>Pemilihan palet warna yang sesuai untuk memperkuat mood, pesan, dan citra dari desain yang dibuat.</p>
+      </article>
+    `,
+    "design-expert": `
+      <article aria-labelledby="design-expert-title">
+      <h2 id="design-expert-title">Prinsip Desain - Mahir (Expert)</h2>
+      <h3>Grid System</h3>
+      <p>Grid system adalah struktur garis yang membantu menempatkan elemen secara konsisten dan terorganisir, sangat penting dalam desain kompleks atau multi-halaman.</p>
+      <h3>Prinsip Gestalt</h3>
+      <p>Prinsip Gestalt memanfaatkan cara manusia melihat dan mengelompokkan elemen visual untuk menciptakan desain yang intuitif dan terorganisir.</p>
+      <h3>Interaktivitas</h3>
+      <p>Desain interaktif memungkinkan elemen-elemen tanggap terhadap tindakan pengguna, seperti hover, klik, untuk meningkatkan pengalaman pengguna.</p>
+      <h3>Branding Consistency</h3>
+      <p>Menjaga keseragaman elemen desain agar merek mempunyai identitas yang kuat dan mudah dikenali di berbagai media.</p>
+      <h3>Accessibility (Aksesibilitas)</h3>
+      <p>Mendesain agar semua orang, termasuk yang memiliki disabilitas, dapat mengakses dan menggunakan dengan mudah menggunakan prinsip aksesibilitas.</p>
+      </article>
+    `,
+    "comm-basic": `
+      <article aria-labelledby="comm-basic-title">
+      <h2 id="comm-basic-title">Prinsip Komunikasi - Dasar (Basic)</h2>
+      <h3>Pesan Jelas</h3>
+      <p>Penting untuk menyampaikan pesan dengan kata-kata sederhana dan jelas agar mudah dimengerti dan tidak menimbulkan kebingungan.</p>
+      <h3>Mendengarkan Aktif</h3>
+      <p>Mendengarkan secara fokus memberikan perhatian penuh dan respon yang sesuai terhadap pembicara, bukan hanya mendengar tanpa mengerti.</p>
+      <h3>Umpan Balik (Feedback)</h3>
+      <p>Memberikan tanggapan yang konstruktif memastikan pesan telah diterima dan dimengerti dengan baik oleh penerima.</p>
+      <h3>Bahasa Tubuh</h3>
+      <p>Komunikasi nonverbal lewat ekspresi wajah, gestur, dan postur tubuh memberikan konteks dan tambahan makna.</p>
+      <h3>Empati</h3>
+      <p>Memahami dan merasakan perasaan lawan bicara membantu menjalin hubungan yang lebih baik dan komunikasi efektif.</p>
+      </article>
+    `,
+    "comm-intermediate": `
+      <article aria-labelledby="comm-intermediate-title">
+      <h2 id="comm-intermediate-title">Prinsip Komunikasi - Menengah (Intermediate)</h2>
+      <h3>Nada Suara dan Intonasi</h3>
+      <p>Memahami penggunaan nada suara untuk mengkomunikasikan emosi serta maksud yang benar sesuai konteks dan audiens.</p>
+      <h3>Keterbukaan</h3>
+      <p>Bersikap jujur, transparan dan terbuka untuk membangun kepercayaan dan kejelasan dalam komunikasi.</p>
+      <h3>Konsistensi Pesan</h3>
+      <p>Memastikan pesan disampaikan dengan cara yang seragam di semua platform dan situasi agar mudah dikenali dan dipercaya.</p>
+      <h3>Manajemen Konflik</h3>
+      <p>Mengelola perbedaan pendapat secara konstruktif untuk menemukan solusi yang menguntungkan semua pihak.</p>
+      <h3>Keterampilan Presentasi</h3>
+      <p>Menyampaikan ide dan informasi secara efektif agar audiens terlibat dan memahami materi yang disampaikan.</p>
+      </article>
+    `,
+    "comm-expert": `
+      <article aria-labelledby="comm-expert-title">
+      <h2 id="comm-expert-title">Prinsip Komunikasi - Mahir (Expert)</h2>
+      <h3>Komunikasi Persuasif</h3>
+      <p>Teknik menyampaikan pesan untuk mempengaruhi sikap, keyakinan, atau tindakan audiens secara efektif dan etis.</p>
+      <h3>Storytelling</h3>
+      <p>Menggunakan narasi menarik agar pesan mudah diingat dan menyentuh emosi audiens.</p>
+      <h3>Komunikasi Antarbudaya</h3>
+      <p>Memahami berbagai perbedaan budaya dan adaptasi gaya komunikasi agar pesan tersampaikan dengan tepat dan diterima baik.</p>
+      <h3>Penggunaan Teknologi Komunikasi</h3>
+      <p>Memanfaatkan media digital, platform online, dan alat komunikasi modern untuk jangkauan dan efektivitas lebih luas.</p>
+      <h3>Etika Komunikasi</h3>
+      <p>Menjaga integritas dan tanggung jawab dalam menyampaikan pesan, menghindari manipulasi atau misinformasi.</p>
+      </article>
+    `
+  };
+
+  const navButtons = document.querySelectorAll('nav button');
+  const contentSection = document.getElementById('content-section');
+
+  function setActiveSection(sectionKey) {
+    contentSection.innerHTML = contents[sectionKey];
+    navButtons.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.section === sectionKey);
+      if(btn.dataset.section === sectionKey) {
+        btn.setAttribute('aria-current', 'page');
+      } else {
+        btn.removeAttribute('aria-current');
+      }
+    });
+    contentSection.focus();
+  }
+
+  navButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      setActiveSection(btn.dataset.section);
+    });
+  });
+
+  // Initialize with first section
+  setActiveSection('design-basic');
+</script>
+</body>
+</html>
+</content>
+</create_file>
+
